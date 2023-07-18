@@ -1,51 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <title>Cart - Shopping App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 text-center  p-1 text-warning">
-                <h2>My Shopping Cart</h2>
-            </div>
-            <div class="col-md-2 text-left text-warning p-4 ">
-                <i class='bx bx-exit'></i>
-                <a href="./Home.html" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Home</a>
-            </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Shopping App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Cart.html">Cart</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+ <section>
+  <div class="container mt-4">
+        <h1>Cart</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample cart items (static representation) -->
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Product 1</td>
+                    <td>$19.99</td>
+                    <td>
+                        <input type="number" min="1" value="1" class="form-control" onchange="updateCartItem(1, this.value)">
+                    </td>
+                    <td>$19.99</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="removeCartItem(1)">Remove</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Product 2</td>
+                    <td>$24.99</td>
+                    <td>
+                        <input type="number" min="1" value="1" class="form-control" onchange="updateCartItem(2, this.value)">
+                    </td>
+                    <td>$24.99</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="removeCartItem(2)">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-end">
+            <strong>Total: $44.98</strong>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 p-4">
-                <div class="card">
-                    <div class="card-header">
-                        <img src="../images/earing.jpg" class="card-img-top">
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Earring</h5>
-                        <div class="cart-price">₹750</div>
-                        <input type="number" class="cart-quantity" placeholder="Quantity">
-                    </div>
-                    <div class="text-center">
-                        <div>Total</div>
-                        <div class="total-price">₹0</div>
-                        <button type="submit" class="btn btn-warning">Order Now</button>
-                        <i class="bx-bx-x-circle" id="close-cart"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</section>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="Cart.js"></script>
 </body>
-
 </html>

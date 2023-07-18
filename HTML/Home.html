@@ -1,126 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <title>Shopping Cart</title>
-  <link rel="stylesheet" href="Home.css" />
-
+  <title>Products Shopping App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
+    /* Custom styles for the Jumbotron */
+    .jumbotron {
+  background-image: url("https://t3.ftcdn.net/jpg/06/18/39/80/240_F_618398013_gqAmLcgmjVAH9XLlHGJNNa6XzelPjePo.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+  background-repeat:no-repeat;
+  text-align: center;
+  background-size: 100% 100%;
+}
+
+
+    .jumbotron h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Custom styles for the Featured Products Section */
+    .featured-products .card {
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .featured-products .card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .featured-products .card-title {
+      font-size: 1.5rem;
+    }
+
+    /* Custom styles for the Navbar */
+    .navbar {
+      background-color: #333;
+    }
+
+    .navbar-brand {
+      font-size: 1.8rem;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 1.2rem;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #fff;
+    }
   </style>
 </head>
-
 <body>
-  <header>
-    <nav>
-      <div class="head">Shopping Cart</div>
-    </nav>
-  </header>
-  <section>
-  
-    <div>
-      <img src="../images/bag.jpg" alt="" />
-      <h3>Bags</h3>
-      <h4>₹500</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">StyleHub</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Cart.html">Cart</a>
+        </li>
+      </ul>
     </div>
-    <div>
-      <img src="../images/perfume.jpg" alt="" />
-      <h3>Perfume</h3>
-      <h4>₹750</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
-    </div>
-    <div>
-      <img src="../images/Specs.jpg" alt="" />
-      <h3>Spectacles</h3>
-      <h4>₹300</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
-    </div>
-    <div>
-      <img src="../images/earing.jpg" alt="" />
-      <h3>Earrings</h3>
-      <h4>₹400</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
-    </div>
-    <div>
-      <img src="../images/watch.jpg" alt="" />
-      <h3>Watch</h3>
-      <h4>₹1000</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
-    </div>
-    <div>
-      <img src="../images/footwear.jpg" alt="" />
-      <h3>Footwear</h3>
-      <h4>₹890</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
-    </div>
-    <div>
-      <img src="../images/necklace.jpg" alt="" />
-      <h3>Necklace</h3>
-      <h4>₹1500</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
-    </div>
-    <div>
-      <img src="../images/Handbag.jpg" alt="" />
-      <h3>Handbag</h3>
-      <h4>₹1200</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
-    </div>
-    <div>
-      <img src="../images/rings.jpg" alt="" />
-      <h3>Ring</h3>
-      <h4>₹1550</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
-    </div>
-    <div>
-      <img src="../images/sneaker.jpg" alt="" />
-      <h3>Sneaker</h3>
-      <h4>₹550</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
-    </div>
-    <div>
-      <img src="../images/Earpod.jpg" alt="" />
-      <h3>Earpod</h3>
-      <h4>₹1200</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
-    </div>
-    <div>
-      <img src="../images/Smartwatch.jpg" alt="" />
-      <h3>Smart Watch</h3>
-      <h4>₹2500</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
-    </div>
-    <div>
-      <img src="../images/Saree.jpg" alt="" />
-      <h3>Saree</h3>
-      <h4>₹1250</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
-    </div>
-    <div>
-      <img src="../images/glass.jpg" alt="" />
-      <h3>Glases</h3>
-      <h4>₹150</h4>
-      <button type="submit" class="btn btn-warning"><a href="cart.html">Order Now</a></button>
-
+  </nav> 
+  <section class="jumbotron jumbotron-fluid bg-primary text-white text-center py-5 mb-0">
+    <div class="container">
+      <h1 class="display-4">Welcome to StyleHub</h1>
+      <p class="lead">Discover amazing products at great prices!</p>
+      <a href="#" class="btn btn-dark btn-lg">Shop Now</a>
     </div>
   </section>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+  <section class="featured-products py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Featured Products</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="/images/men.jpg" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+              <h5 class="card-title">Men</h5>
+              <p class="card-text">"Men's clothing is more than just attire!</p>
+              <a href="#" class="btn btn-primary">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="/images/women.jpg" class="card-img-top" alt="Product 2">
+            <div class="card-body">
+              <h5 class="card-title">Women</h5>
+              <p class="card-text">Women's clothing is an expression of elegance and individuality!</p>
+              <a href="#" class="btn btn-primary">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="/images/kids.jpg" class="card-img-top" alt="Product 3">
+            <div class="card-body">
+              <h5 class="card-title">Kids</h5>
+              <p class="card-text">Children's clothing is more than just fabric and thread!</p>
+              <a href="#" class="btn btn-primary">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/images/offer1.jpg" class="d-block w-100" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/offer2.jpg" class="d-block w-100" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/offer3.jpg" class="d-block w-100" alt="Image 3">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <section class="featured-brands py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Featured Brands</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/images/puma.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/images/leviss.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card" style="width: 18rem;">
+              <img src="/images/nike.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>

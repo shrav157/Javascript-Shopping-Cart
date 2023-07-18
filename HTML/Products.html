@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products - Shopping App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .jumbotron {
+  background-image: url("https://img.freepik.com/premium-photo/side-view-smiley-woman-holding-up-shopping-bags_23-2148684506.jpg?w=2000");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+  background-repeat:no-repeat;
+  text-align: center;
+  background-size: 100% 100%;
+     } body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .product {
+            width: calc(23% - 20px);
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .product img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+        }
+        .product-name {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            color: green;
+            margin-bottom: 10px;
+        }
+        .add-to-cart {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+        header {
+            background-color: #f9f9f9;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Shopping App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Cart.html">Cart</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section class="jumbotron jumbotron-fluid bg-primary text-white text-center py-5 mb-0">
+    <div class="container">
+      <h1 class="display-4">Women Shopping</h1>
+      <p class="lead">Discover amazing products at great prices!</p>
+      <!-- <a href="#" class="btn btn-dark btn-lg">Shop Now</a> -->
+    </div>
+  </section>
+  <header>Women</header>
+  <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    <div class="col">
+        <div class="card">
+            <img src="/images/bag.jpg" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+                <h5 class="card-title">Bag</h5>
+                <p class="card-text">	₹700</p>
+                <button class="btn btn-primary" onclick="addToCart(1)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="/images/earing.jpg" class="card-img-top" alt="Product 2">
+            <div class="card-body">
+                <h5 class="card-title">Earing</h5>
+                <p class="card-text">₹250</p>
+                <button class="btn btn-primary" onclick="addToCart(2)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="/images/Earpod.jpg" class="card-img-top" alt="Product 3">
+            <div class="card-body">
+                <h5 class="card-title">Earpod</h5>
+                <p class="card-text">₹2000</p>
+                <button class="btn btn-primary" onclick="addToCart(3)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="/images/footwear.jpg" class="card-img-top" alt="Product 4">
+            <div class="card-body">
+                <h5 class="card-title">Footwear</h5>
+                <p class="card-text">₹850</p>
+                <button class="btn btn-primary" onclick="addToCart(4)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="card">
+          <img src="/images/glass.jpg" class="card-img-top" alt="Product 5">
+          <div class="card-body">
+              <h5 class="card-title">Glass</h5>
+              <p class="card-text">₹400</p>
+              <button class="btn btn-primary" onclick="addToCart(5)">Add to Cart</button>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+    <div class="card">
+        <img src="/images/Handbag.jpg" class="card-img-top" alt="Product 6">
+        <div class="card-body">
+            <h5 class="card-title">Handbag</h5>
+            <p class="card-text">₹1250</p>
+            <button class="btn btn-primary" onclick="addToCart(6)">Add to Cart</button>
+        </div>
+    </div>
+</div>
+<div class="col">
+  <div class="card">
+      <img src="/images/necklace.jpg" class="card-img-top" alt="Product 7">
+      <div class="card-body">
+          <h5 class="card-title">Necklace</h5>
+          <p class="card-text">₹850</p>
+          <button class="btn btn-primary" onclick="addToCart(7)">Add to Cart</button>
+      </div>
+  </div>
+</div>
+<div class="col">
+  <div class="card">
+      <img src="/images/perfume.jpg" class="card-img-top" alt="Product 8">
+      <div class="card-body">
+          <h5 class="card-title">Perfume</h5>
+          <p class="card-text">₹1350</p>
+          <button class="btn btn-primary" onclick="addToCart(8)">Add to Cart</button>
+      </div>
+  </div>
+</div>
+<div class="col">
+  <div class="card">
+      <img src="/images/rings.jpg" class="card-img-top" alt="Product 9">
+      <div class="card-body">
+          <h5 class="card-title">Rings</h5>
+          <p class="card-text">₹3000</p>
+          <button class="btn btn-primary" onclick="addToCart(9)">Add to Cart</button>
+      </div>
+  </div>
+</div>
+<div class="col">
+  <div class="card">
+      <img src="/images/Saree.jpg" class="card-img-top" alt="Product 10">
+      <div class="card-body">
+          <h5 class="card-title">Saree</h5>
+          <p class="card-text">₹350</p>
+          <button class="btn btn-primary" onclick="addToCart(10)">Add to Cart</button>
+      </div>
+  </div>
+</div>
+<div class="col">
+  <div class="card">
+      <img src="/images/Smartwatch.jpg" class="card-img-top" alt="Product 11">
+      <div class="card-body">
+          <h5 class="card-title">Smartwatch</h5>
+          <p class="card-text">₹2500</p>
+          <button class="btn btn-primary" onclick="addToCart(11)">Add to Cart</button>
+      </div>
+  </div>
+</div>
+<div class="col">
+  <div class="card">
+      <img src="/images/Sneaker.jpg" class="card-img-top" alt="Product 12">
+      <div class="card-body">
+          <h5 class="card-title">Sneaker</h5>
+          <p class="card-text">₹800</p>
+          <button class="btn btn-primary" onclick="addToCart(12)">Add to Cart</button>
+      </div>
+  </div>
+</div>
+<div class="col">
+  <div class="card">
+      <img src="/images/Specs.jpg" class="card-img-top" alt="Product 13">
+      <div class="card-body">
+          <h5 class="card-title">Spectacle</h5>
+          <p class="card-text">₹250</p>
+          <button class="btn btn-primary" onclick="addToCart(13)">Add to Cart</button>
+      </div>
+  </div>
+</div>
+<div class="col">
+  <div class="card">
+      <img src="/images/watch.jpg" class="card-img-top" alt="Product 14">
+      <div class="card-body">
+          <h5 class="card-title">Watch</h5>
+          <p class="card-text">₹500</p>
+          <button class="btn btn-primary" onclick="addToCart(14)">Add to Cart</button>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="Cart.js"></script>
+
+</body>
+</html>
