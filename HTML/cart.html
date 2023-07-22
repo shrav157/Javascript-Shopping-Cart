@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+     .navbar {
+      background-color: #333;
+    }
+
+    .navbar-brand {
+      font-size: 1.8rem;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 1.2rem;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #fff;
+    }
+  </style>
   <title>Cart - Shopping App</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Shopping App</a>
+    <a class="navbar-brand" href="#">StyleHub</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,56 +41,17 @@
         </li>
       </ul>
     </div>
-  </nav>
- <section>
-  <div class="container mt-4">
-        <h1>Cart</h1>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Product</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Total</th>
-                    <th scope="col">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Sample cart items (static representation) -->
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Product 1</td>
-                    <td>$19.99</td>
-                    <td>
-                        <input type="number" min="1" value="1" class="form-control" onchange="updateCartItem(1, this.value)">
-                    </td>
-                    <td>$19.99</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm" onclick="removeCartItem(1)">Remove</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Product 2</td>
-                    <td>$24.99</td>
-                    <td>
-                        <input type="number" min="1" value="1" class="form-control" onchange="updateCartItem(2, this.value)">
-                    </td>
-                    <td>$24.99</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm" onclick="removeCartItem(2)">Remove</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="text-end">
-            <strong>Total: $44.98</strong>
-        </div>
+  </nav> 
+  <section class="container py-4">
+    <h4 class="mb-4">Cart</h4>
+  
+    <div id="cart-items"></div>
+  
+    <div class="mt-4 text-end">
+      <h5>Total Price: <span id="total-price">$0.00</span></h5>
+      <button class="btn btn-primary mt-3" onclick="checkout()">Checkout</button>
     </div>
-
 </section>
-
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="/JS/Cart.js"></script>
