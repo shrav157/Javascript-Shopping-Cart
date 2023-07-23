@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-     .navbar {
-      background-color: #333;
-    }
-
-    .navbar-brand {
-      font-size: 1.8rem;
-    }
-
-    .navbar-nav .nav-link {
-      font-size: 1.2rem;
-    }
-
-    .navbar-nav .nav-link:hover {
-      color: #fff;
-    }
-  </style>
   <title>Cart - Shopping App</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .navbar {
+     background-color: #333;
+   }
+
+   .navbar-brand {
+     font-size: 1.8rem;
+   }
+
+   .navbar-nav .nav-link {
+     font-size: 1.2rem;
+   }
+
+   .navbar-nav .nav-link:hover {
+     color: #fff;
+   }
+ </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -48,8 +48,8 @@
     <div id="cart-items"></div>
   
     <div class="mt-4 text-end">
-      <h5>Total Price: <span id="total-price">$0.00</span></h5>
-      <button class="btn btn-primary mt-3" onclick="checkout()">Checkout</button>
+      <h5>Total Price: <span id="total-price">₹0.00</span></h5>
+      <button class="btn btn-dark mt-3" onclick="checkout()">Checkout</button>
     </div>
 </section>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

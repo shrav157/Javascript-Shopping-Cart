@@ -304,12 +304,13 @@ function renderCartItems() {
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">${item.name}</h5>
-              <p class="card-text">$${item.price}</p>
+              <p class="card-text">₹${item.price}</p>
               <div class="d-flex align-items-center">
                 <button class="btn btn-secondary decrease-quantity-btn" data-product-id="${item.id}">-</button>
                 <span class="mx-2">${item.quantity}</span>
                 <button class="btn btn-secondary increase-quantity-btn" data-product-id="${item.id}">+</button>
-                <button class="btn btn-danger remove-from-cart-btn ms-auto" data-product-id="${item.id}">Remove</button>
+                
+                <button class="btn btn-dark remove-from-cart-btn ms-auto" data-product-id="${item.id}">Remove</button>
               </div>
             </div>
           </div>
@@ -358,7 +359,7 @@ function updateTotalPrice() {
   if (!totalPriceElement) return;
 
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-  totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+  totalPriceElement.textContent = `₹${totalPrice.toFixed(2)}`;
 }
 
 // Function to handle checkout button click
